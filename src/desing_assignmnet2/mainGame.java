@@ -18,8 +18,11 @@ public class mainGame {
         // TODO code application logic here
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new QuizRule().setVisible(true);
-               
+                Database db = new Database();
+                logIn login = new logIn(db);
+                
+                login.setVisible(true);
+                   
                 
             }
         });
