@@ -78,6 +78,7 @@ public class Database {
                     data.loginFlag = true;
                 } else {
                     data.loginFlag = false;
+                    System.out.println("wrong password");
                 }
             } else {
                 /**
