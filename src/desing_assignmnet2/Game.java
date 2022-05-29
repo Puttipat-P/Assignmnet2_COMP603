@@ -11,6 +11,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -71,32 +72,35 @@ public class Game extends javax.swing.JFrame {
           scoreLabel5.setOpaque(true);
         }
         if(score == 6){
-          scoreLabel5.setBackground(Color.GREEN);
-          scoreLabel5.setOpaque(true);
+          scoreLabel6.setBackground(Color.GREEN);
+          scoreLabel6.setOpaque(true);
         }
         if(score == 7){
-          scoreLabel5.setBackground(Color.GREEN);
-          scoreLabel5.setOpaque(true);
+          scoreLabel7.setBackground(Color.GREEN);
+          scoreLabel7.setOpaque(true);
         }
         if(score == 8){
-          scoreLabel5.setBackground(Color.GREEN);
-          scoreLabel5.setOpaque(true);
+          scoreLabel8.setBackground(Color.GREEN);
+          scoreLabel8.setOpaque(true);
         }
         if(score == 9){
-          scoreLabel5.setBackground(Color.GREEN);
-          scoreLabel5.setOpaque(true);
+          scoreLabel9.setBackground(Color.GREEN);
+          scoreLabel9.setOpaque(true);
         }
         if(score == 10){
-          scoreLabel5.setBackground(Color.GREEN);
-          scoreLabel5.setOpaque(true);
+          scoreLabel10.setBackground(Color.GREEN);
+          scoreLabel10.setOpaque(true);
         }
         
         
-        if (question >= 5)
+        
+        
+        if (question >= 10)
         {
-        QuizEnd quizend= new QuizEnd();
+        QuizEnd quizend= new QuizEnd(this);
         quizend.setVisible(true);
         
+       
         
         }
         
@@ -250,36 +254,32 @@ public class Game extends javax.swing.JFrame {
                         .addGap(50, 50, 50)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(88, 88, 88)
-                                        .addComponent(skipButton)
-                                        .addGap(130, 130, 130)
-                                        .addComponent(jLabel2))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(63, 63, 63)
-                                        .addComponent(skipLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(lifeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(92, 92, 92))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(lifeButton)
-                                        .addGap(113, 113, 113))))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(ansButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 307, Short.MAX_VALUE)
                                     .addComponent(ansButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(ansButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(ansButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                    .addComponent(ansButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                    .addGap(81, 81, 81)
+                                    .addComponent(skipLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lifeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                    .addGap(109, 109, 109)
+                                    .addComponent(skipButton)
+                                    .addGap(135, 135, 135)
+                                    .addComponent(jLabel2)
+                                    .addGap(119, 119, 119)
+                                    .addComponent(lifeButton)
+                                    .addGap(63, 63, 63))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(53, Short.MAX_VALUE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(QuestionsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 632, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addGap(18, 18, 18)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(scoreLabel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(scoreLabel9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -317,33 +317,26 @@ public class Game extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(39, 39, 39)
-                                .addComponent(lifeLabel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel2)
-                                    .addComponent(lifeButton)))
+                                .addGap(77, 77, 77)
+                                .addComponent(jLabel2))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addGap(34, 34, 34)
-                                .addComponent(skipLabel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(skipButton)
-                                .addGap(6, 6, 6)))))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                        .addComponent(skipLabel)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(skipButton)
+                                        .addGap(6, 6, 6))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                        .addComponent(lifeLabel)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(lifeButton)
+                                        .addGap(4, 4, 4)))))))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(ansButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ansButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(44, 44, 44)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(ansButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ansButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(9, 9, 9)
                         .addComponent(scoreLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                         .addComponent(scoreLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(scoreLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -351,7 +344,17 @@ public class Game extends javax.swing.JFrame {
                         .addComponent(scoreLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(scoreLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(19, 19, 19))))
+                        .addGap(19, 19, 19))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(ansButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ansButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(44, 44, 44)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(ansButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ansButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap())))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -366,13 +369,21 @@ public class Game extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void ansButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ansButton1ActionPerformed
         // TODO add your handling code here:
-        if(quiz[question][5]=="1") {
+        if(quiz[question][5]=="1") { 
+            
+            JOptionPane.showMessageDialog(null,"Correct","Message",JOptionPane.INFORMATION_MESSAGE);
+            
             score++;
-        } 
+        } else if(quiz[question][5]!="1") {
+            JOptionPane.showMessageDialog(null,"Wrong","Message",JOptionPane.INFORMATION_MESSAGE);
+        }
+        
+      
         ansButton1.setEnabled(true);
         ansButton2.setEnabled(true);
         ansButton3.setEnabled(true);
@@ -392,7 +403,11 @@ public class Game extends javax.swing.JFrame {
     private void ansButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ansButton2ActionPerformed
         // TODO add your handling code here:
          if(quiz[question][5]=="2") {
+         JOptionPane.showMessageDialog(null,"Correct","Message",JOptionPane.INFORMATION_MESSAGE);
+            
             score++;
+        } else if(quiz[question][5]!="2") {
+            JOptionPane.showMessageDialog(null,"Wrong","Message",JOptionPane.INFORMATION_MESSAGE);
         }
         ansButton1.setEnabled(true);
         ansButton2.setEnabled(true);
@@ -412,7 +427,11 @@ public class Game extends javax.swing.JFrame {
     private void ansButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ansButton3ActionPerformed
         // TODO add your handling code here:
          if(quiz[question][5]=="3") {
+            JOptionPane.showMessageDialog(null,"Correct","Message",JOptionPane.INFORMATION_MESSAGE);
+            
             score++;
+        } else if(quiz[question][5]!="3") {
+            JOptionPane.showMessageDialog(null,"Wrong","Message",JOptionPane.INFORMATION_MESSAGE);
         }
         ansButton1.setEnabled(true);
         ansButton2.setEnabled(true);
@@ -432,7 +451,11 @@ public class Game extends javax.swing.JFrame {
     private void ansButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ansButton4ActionPerformed
         // TODO add your handling code here:
          if(quiz[question][5]=="4") {
+            JOptionPane.showMessageDialog(null,"Correct","Message",JOptionPane.INFORMATION_MESSAGE);
+            
             score++;
+        } else if(quiz[question][5]!="4") {
+            JOptionPane.showMessageDialog(null,"Wrong","Message",JOptionPane.INFORMATION_MESSAGE);
         }
         ansButton1.setEnabled(true);
         ansButton2.setEnabled(true);
