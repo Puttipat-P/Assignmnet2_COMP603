@@ -41,7 +41,7 @@ public class Game extends javax.swing.JFrame {
      
         QuestionsTextField.setText(quiz[question][0]);
         QuestionsTextField.setEditable(false);
-        jLabel2.setText(""+score);
+        
         lifeLabel.setText("You have "+life+" 50/50 left");
         skipLabel.setText("You have "+skip+" skip left");
         ansButton1.setText(quiz[question][1]);
@@ -128,7 +128,6 @@ public class Game extends javax.swing.JFrame {
         ansButton4 = new javax.swing.JButton();
         skipButton = new javax.swing.JButton();
         lifeButton = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
         scoreLabel1 = new javax.swing.JLabel();
         scoreLabel2 = new javax.swing.JLabel();
         scoreLabel3 = new javax.swing.JLabel();
@@ -184,17 +183,6 @@ public class Game extends javax.swing.JFrame {
         lifeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lifeButtonActionPerformed(evt);
-            }
-        });
-
-        jLabel2.setText("jLabel2");
-        jLabel2.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
-                jLabel2AncestorAdded(evt);
-            }
-            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
             }
         });
 
@@ -270,9 +258,7 @@ public class Game extends javax.swing.JFrame {
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                     .addGap(109, 109, 109)
                                     .addComponent(skipButton)
-                                    .addGap(135, 135, 135)
-                                    .addComponent(jLabel2)
-                                    .addGap(119, 119, 119)
+                                    .addGap(305, 305, 305)
                                     .addComponent(lifeButton)
                                     .addGap(63, 63, 63))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE))
@@ -316,22 +302,16 @@ public class Game extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(77, 77, 77)
-                                .addComponent(jLabel2))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addGap(34, 34, 34)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(skipLabel)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(skipButton)
-                                        .addGap(6, 6, 6))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(lifeLabel)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(lifeButton)
-                                        .addGap(4, 4, 4)))))))
+                                .addComponent(skipLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(skipButton)
+                                .addGap(6, 6, 6))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(lifeLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lifeButton)
+                                .addGap(4, 4, 4)))))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(9, 9, 9)
@@ -346,7 +326,6 @@ public class Game extends javax.swing.JFrame {
                         .addComponent(scoreLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(19, 19, 19))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(ansButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ansButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -525,13 +504,6 @@ public class Game extends javax.swing.JFrame {
        
     }//GEN-LAST:event_lifeButtonActionPerformed
 
-    private void jLabel2AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jLabel2AncestorAdded
-        // TODO add your handling code here:
-        if(score == 1){
-            jLabel2.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_jLabel2AncestorAdded
-
     /**
      * @param args the command line arguments
      */
@@ -543,7 +515,6 @@ public class Game extends javax.swing.JFrame {
     private javax.swing.JButton ansButton2;
     private javax.swing.JButton ansButton3;
     private javax.swing.JButton ansButton4;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton lifeButton;
     private javax.swing.JLabel lifeLabel;
